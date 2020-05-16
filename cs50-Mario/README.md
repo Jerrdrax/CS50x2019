@@ -15,6 +15,6 @@ bigger than 8 or smaller than 1.
 \#  \#
 
 * Height 3:  
-  \#  \#  
- \#\#  \#\#  
+    \#  \#  
+  \#\#  \#\#  
 \#\#\#  \#\#\#  
