@@ -1,4 +1,4 @@
-# mario
+# Mario
 ## Terminal pyramids
 
 * Program that prints pyramids in the terminal.
@@ -12,9 +12,13 @@ bigger than 8 or smaller than 1.
 ### Examples
 
 * Height 1:    
-'''#  #'''
+'''
+#  #
+'''
 
 * Height 3:  
-'''  #  #  
-  ##  ##  
- ###  ###'''
+'''
+   #  #
+  ##  ##
+ ###  ###
+ '''
