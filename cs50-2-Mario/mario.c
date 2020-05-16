@@ -8,7 +8,9 @@
 void reciveheight (char inputheight[2], int *pheight);
 void printpyramid (int *height);
 
-int main(int argc, char const *argv[]) {
+// Start main function
+int main(int argc, char const *argv[])
+{
     int height;
     char inputheight[2];
 

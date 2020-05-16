@@ -1,5 +1,5 @@
-# Mario  
-## Terminal pyramids  
+## Mario  
+### Terminal pyramids  
 
 * Program that prints pyramids in the terminal.  
 
