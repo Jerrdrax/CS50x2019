@@ -2,10 +2,10 @@
 Harvard University. An introduction to the intellectual enterprises of computer science and the art of programming.
 
 ## What it is?  
-An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently.  
+* An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently.  
 **https://www.edx.org/course/cs50s-introduction-to-computer-science**  
 
-## What i Learned
+## What I Learned
 
 * A broad and robust understanding of computer science and programming
 
