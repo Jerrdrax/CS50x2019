@@ -13,5 +13,6 @@ char *name = malloc(30);
 
     printf("Hello %s", name);
 
+    free(name);
     return 0;
 }

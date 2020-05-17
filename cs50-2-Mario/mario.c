@@ -15,7 +15,6 @@ int main(int argc, char const *argv[])
     char inputheight[2];
 
     reciveheight(inputheight, &height);
-    //printf("%i\n", height); // reciveheight Test
 
     printpyramid (&height);
     printf("\n");
