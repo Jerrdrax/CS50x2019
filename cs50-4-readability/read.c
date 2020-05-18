@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 
     //printf("letters: %.0f\n", letters); // Test
     //printf("words: %.0f\n", words); // Test
-    //printf("sentences: %.0f\n", sentences);
+    //printf("sentences: %.0f\n", sentences); // Test
 
     return 0;
 }
