@@ -65,10 +65,6 @@ void textletters (char text[2048], float *letters)
         {
             *letters += 1;
         }
-        if (text[i] == 'ñ' || text[i] == 'Ñ')
-        {
-            *letters += 1;
-        }
         i++;
     }
 }
