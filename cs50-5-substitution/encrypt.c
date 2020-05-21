@@ -6,6 +6,8 @@
 #include <stdbool.h>
 
 bool validcommandline (int *argc, char const argv[27]);
+void userinputtext (char text[1024]);
+void textsubstitution (char text[1024], char key[27]);
 
 // Start function main
 int main(int argc, char const *argv[])
@@ -21,7 +23,10 @@ int main(int argc, char const *argv[])
     }
 
     strcpy(key, argv[1]);
-    printf("Key is %s\n", key); // Test
+
+    userinputtext(text);
+
+    textsubstitution (text, key);
 
     return 0;
 }
@@ -71,4 +76,71 @@ bool validcommandline (int *argc, char const argv[27])
     }
 
     return true;
+}
+
+// Recives the text to encrypt from the user
+void userinputtext (char text[1024])
+{
+    int i;
+
+    for (i = 0; i < 1024; i++)
+    {
+        text[i] = 0;
+    }
+
+    printf("Plaintext: ");
+    fgets(text, 1024, stdin);
+}
+
+// Applys cipher substitution and prints
+void textsubstitution (char text[1024], char key[27])
+{
+    int i, j, k, temp;
+    char cipher[1024];
+    char alphabetlow[26];
+    char alphabetup[26];
+
+    for (i = 0; i < 1024; i++)
+    {
+        cipher[i] = 0;
+    }
+    for (i = 0, j = 65, k = 97; i < 26; i++, j++, k++)
+    {
+        alphabetup[i] = j;
+        alphabetlow[i] = k;
+    }
+
+    i = 0;
+    while (text[i] != 0)
+    {
+        if (text[i] >= 65 && text[i] <= 90)
+        {
+            for (j = 0; j < 26; j++)
+            {
+                if (text[i] == alphabetup[j])
+                {
+                    cipher[i] = key[j];
+                    cipher[i] = toupper(cipher[i]);
+                }
+            }
+        }
+        else if (text[i] >= 97 && text[i] <= 122)
+        {
+            for (j = 0; j < 26; j++)
+            {
+                if (text[i] == alphabetlow[j])
+                {
+                    cipher[i] = key[j];
+                    cipher[i] = tolower(cipher[i]);
+                }
+            }
+        }
+        else
+        {
+            cipher[i] = text[i];
+        }
+        i++;
+    }
+
+    printf("ciphertext: %s\n", cipher);
 }
