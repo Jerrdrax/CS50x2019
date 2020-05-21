@@ -6,4 +6,4 @@ and prints in terminal hello.
 ### Example  
 User named Mina:
 
-__> Hello Mina__ 
+`__> Hello Mina__``

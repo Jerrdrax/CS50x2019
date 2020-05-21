@@ -12,9 +12,11 @@ bigger than 8 or smaller than 1.
 ### Examples  
 
 * Height 1:     
-\> \#  \#
+`\> \#  \#`
 
-* Height 3:  
+* Height 3:
+```  
 \>    \#  \#  
 \>  \#\#  \#\#  
 \>\#\#\#  \#\#\#  
+```

@@ -9,7 +9,7 @@ comprehend some text.
 
 * The formula is:
 
-'__Index = 0.0588 * L - 0.296 * S - 15.8__'
+`__Index = 0.0588 * L - 0.296 * S - 15.8__`
 * __L__ is the average number of __LETTERS__ per 100 words in the text.
 * __S__ is the average number of __SENTENCES__ per 100 words in the text.
 

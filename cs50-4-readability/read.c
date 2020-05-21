@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <math.h>
-#include <stdbool.h>
 #include <string.h>
 
 void textrecive (char text[2048]);
