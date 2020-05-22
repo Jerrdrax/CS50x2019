@@ -1,4 +1,4 @@
-// Implement a program that implements a substitution cipher.
+// Program that implements a substitution cipher.
 
 #include <stdio.h>
 #include <ctype.h>
@@ -9,7 +9,7 @@ bool validcommandline (int *argc, char const argv[27]);
 void userinputtext (char text[1024]);
 void textsubstitution (char text[1024], char key[27]);
 
-// Start function main
+// Start of the function main
 int main(int argc, char const *argv[])
 {
     bool isvalid = true;
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Validates Arguments
+// Validates the command line Arguments
 bool validcommandline (int *argc, char const argv[27])
 {
     int i, j, temp;
@@ -78,7 +78,7 @@ bool validcommandline (int *argc, char const argv[27])
     return true;
 }
 
-// Recives the text to encrypt from the user
+// Gets the text to encrypt from the user
 void userinputtext (char text[1024])
 {
     int i;
@@ -92,7 +92,7 @@ void userinputtext (char text[1024])
     fgets(text, 1024, stdin);
 }
 
-// Applys cipher substitution and prints
+// Applies cipher substitution and prints
 void textsubstitution (char text[1024], char key[27])
 {
     int i, j, k, temp;
@@ -142,5 +142,5 @@ void textsubstitution (char text[1024], char key[27])
         i++;
     }
 
-    printf("ciphertext: %s\n", cipher);
+    printf("Ciphertext: %s\n", cipher);
 }

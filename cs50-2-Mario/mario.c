@@ -1,4 +1,4 @@
-// Program that prints in terminal pyramids of # with 2 spaces in between
+// Program that prints pyramids in the terminal of # with 2 spaces in between
 // from 1 to 8 height
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Recives the height of the pyramid from the user
+// Gets the height of the pyramid from the user
 void reciveheight (char inputheight[2], int *pheight)
 {
     int i;
@@ -49,7 +49,7 @@ void reciveheight (char inputheight[2], int *pheight)
 
         if (temp == 0 || *pheight < 1 || *pheight > 8)
         {
-            printf("Error type a number between 1 and 8\n");
+            printf("Error, type a number between 1 and 8\n");
             fflush(stdin);
         }
     }

@@ -9,7 +9,7 @@ ciphertext: VKXXN
 ```
 
 ### Conditions
-* Recives a 26 characters key from the command line argument.
+* Gets a 26 characters key from the command line argument.
 
 * Only substitute alphabetical characters!
 

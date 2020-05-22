@@ -1,5 +1,5 @@
 // Program that computes the approximate grade level needed to
-// comprehend some text
+// comprehend some text.
 
 #include <stdio.h>
 #include <ctype.h>
@@ -12,7 +12,7 @@ void textwords (char text[2048], float *words);
 void textsentences (char text[2048], float *sentences);
 void textreadability (char text[2048], float *letters, float *words, float *sentences);
 
-// Start of main function
+// Start of the main function
 int main(int argc, char const *argv[])
 {
     char text [2048];
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Recives the text from the user
+// Gets the text to compute from the user
 void textrecive (char text[2048])
 {
     int i;
@@ -51,7 +51,7 @@ void textrecive (char text[2048])
     fgets(text, 2048, stdin);
 }
 
-// Counts letters in the text
+// Counts the letters in the text
 void textletters (char text[2048], float *letters)
 {
     int i = 0;
@@ -68,7 +68,7 @@ void textletters (char text[2048], float *letters)
     }
 }
 
-// Counts words in the text
+// Counts the words in the text
 void textwords (char text[2048], float *words)
 {
     int temp;
@@ -89,7 +89,7 @@ void textwords (char text[2048], float *words)
     }
 }
 
-// Counts sentences in the text
+// Counts the sentences in the text
 void textsentences (char text[2048], float *sentences)
 {
     int i = 0;

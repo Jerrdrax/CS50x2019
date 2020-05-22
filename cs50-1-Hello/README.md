@@ -1,6 +1,6 @@
 ## Hello
 
-* Program that ask the name of the user  
+* Program that asks for the name of the user  
 and prints in terminal hello.
 
 ### Example  

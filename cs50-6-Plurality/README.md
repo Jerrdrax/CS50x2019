@@ -13,10 +13,10 @@ Alice
 
 ### Conditions
 
-* Takes 2 to 9 candidates from the command line.
+* Gets 2 to 9 candidates from the command line.
 
-* Counts votes by name
+* Counts the votes by name.
 
-* Validates votes and command line arguments
+* Validates the votes and command line arguments.
 
-* Prints winner or winners if there are more than 1
+* Prints the winner or winners if there are more than 1.

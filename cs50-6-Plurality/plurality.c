@@ -18,10 +18,10 @@ CANDIDATE;
 
 void recivenumvotes (int *votes);
 bool valduplicated (int *numcandidates, CANDIDATE candidates[9]);
-void askvotes (int *numcandidates, CANDIDATE candidates[9], int *votes, int *invalidvotes);
+void getsvotes (int *numcandidates, CANDIDATE candidates[9], int *votes, int *invalidvotes);
 void printwinner(int *numcandidates, CANDIDATE candidates[9]);
 
-// Start of main function
+// Start of the main function
 int main(int argc, char const *argv[])
 {
     bool isvalid = true;
@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
 
     recivenumvotes(&votes);
 
-    askvotes (&numcandidates, candidates, &votes, &invalidvotes);
+    getsvotes (&numcandidates, candidates, &votes, &invalidvotes);
 
     printwinner(&numcandidates, candidates);
 
@@ -96,7 +96,7 @@ bool valduplicated (int *numcandidates, CANDIDATE candidates[9])
     return true;
 }
 
-// Recives number of votes
+// Recives the number of votes
 void recivenumvotes (int *votes)
 {
     char num[20];
@@ -105,7 +105,7 @@ void recivenumvotes (int *votes)
 
     while (temp == 0)
     {
-        printf("Number of voters: ");
+        printf("Number of voters?: ");
         scanf("%s", num);
 
         i = 0;
@@ -124,8 +124,8 @@ void recivenumvotes (int *votes)
     *votes = atoi(num);
 }
 
-// Ask Votes from user
-void askvotes (int *numcandidates, CANDIDATE candidates[9], int *votes, int *invalidvotes)
+// Gets the Votes from user
+void getsvotes (int *numcandidates, CANDIDATE candidates[9], int *votes, int *invalidvotes)
 {
     int i, j, temp;
     char vote[30];
@@ -152,7 +152,7 @@ void askvotes (int *numcandidates, CANDIDATE candidates[9], int *votes, int *inv
     *invalidvotes = *votes - j;
 }
 
-// Prints winner or winners
+// Prints the winner or winners
 void printwinner(int *numcandidates, CANDIDATE candidates[9])
 {
     int i, mostvotes;

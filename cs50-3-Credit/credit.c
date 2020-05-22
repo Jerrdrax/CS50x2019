@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Recives card number
+// Gets the card number
 void recivecardnum (char cardnumber[17])
 {
     int i;
@@ -65,7 +65,7 @@ void recivecardnum (char cardnumber[17])
 
     while (temp == 0)
     {
-        printf("\nEnter credit card number: ");
+        printf("\nEnter the credit card number: ");
         scanf("%s", cardnumber);
 
         i = 0;
@@ -83,7 +83,7 @@ void recivecardnum (char cardnumber[17])
     }
 }
 
-// Validates length and the start of card number
+// Validates length and the start of the card number
 void validatelength (char cardnumber[17], bool *isvalid)
 {
     int length;
@@ -96,7 +96,7 @@ void validatelength (char cardnumber[17], bool *isvalid)
     }
 }
 
-// Validates the start of the credit card number returns:
+// Validates the start of the credit card number and returns:
 // 1 = American Express
 // 2 = MasterCard
 // 3 = Visa
