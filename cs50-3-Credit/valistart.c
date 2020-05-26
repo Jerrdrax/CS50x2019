@@ -1,32 +1,35 @@
 // Validates the start of the credit card number
 
-void validatestart ( )
+bool valistart (CREDITCARD *card)
 {
     int temp, i;
 
-    if (number[0] == '3')
+    // validates the start of American Express: '34' '37'
+    if (card->num[0] == '3')
     {
-        if (number[1] == '4' || number[1] == '7')
+        if (card->num[1] == '4' || card->num[1] == '7')
         {
-            strcpy(cardname, AME_EXP);
-            return;
+            strcpy(card->name, "American Express");
+            return true;
         }
     }
 
-    if (number[0] == '5')
+    // Validates the start of MasterCard
+    // start From '51' to '55'
+    if (card->num[0] == '5')
     {
-        temp = number[1] - 48;
+        temp = card->num[1] - 48;
         if (temp >= 1 && temp <= 5)
         {
-            strcpy(cardname, MAS_CAR);
-            return;
+            strcpy(card->name, "MasterCard");
+            return true;
         }
     }
-
+    // start '222'
     temp = 0;
     for (i = 0; i < 3; i++)
     {
-        if (number[i] == '2')
+        if (card->num[i] == '2')
         {
             temp = 1;
         }
@@ -37,16 +40,17 @@ void validatestart ( )
     }
     if (temp == 1)
     {
-        strcpy(cardname, MAS_CAR);
-        return;
+        strcpy(card->name, "MasterCard");
+        return true;
     }
 
-    if (number[0] == '4')
+    // Validates the start of visa '4'
+    if (card->num[0] == '4')
     {
-        strcpy(cardname, VISA);
-        return;
+        strcpy(card->name, "Visa");
+        return true;
     }
 
-    printf("Invalid\n");
-    isvalid = false;
+    // No valid start found
+    return false;
 }

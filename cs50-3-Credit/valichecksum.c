@@ -1,7 +1,6 @@
-// Validates Checksum of the credit card number
-// to determinate if is valid.
+// Validates Checksum of a credit card number to determinate if is valid.
 
-void valichecksum ( )
+bool valichecksum (CREDITCARD *card)
 {
     int length, i, j, sum1, sum2;
     int temp1[MAXLENGTH];
@@ -9,18 +8,21 @@ void valichecksum ( )
 
     sum1 = 0;
     sum2 = 0;
-    length = strlen(number);
+    length = strlen(card->num);
 
+    // Converts from char to ints the card number
     for (i = 0; i < length; i++)
     {
-        temp1[i] = number[i] - 48;
+        temp1[i] = card->num[i] - 48;
     }
 
+    // multiplies by 2 starting with the second to last
     for (i = length - 2; i >= 0; i -= 2)
     {
         temp1[i] *= 2;
     }
 
+    // Converts back to char the results of the multplications
     for (i = 0; i < MAXLENGTH; i++)
     {
         temp2[i] = '0';
@@ -44,24 +46,26 @@ void valichecksum ( )
         i -= 2;
     }
 
+    // sums all the results digits
     for (i = 0; i < MAXLENGTH; i++)
     {
         sum1 += (temp2[i] - 48);
     }
 
+    // sums the rest of digits
     for (i = length - 1; i >= 0; i -= 2)
     {
         sum2 += temp1[i];
     }
     sum1 += sum2;
 
+    // checks if ends in 0
     if (sum1 % 10 == 0)
     {
-        isvalid = true;
+        return true;
     }
     else
     {
-        printf("Invalid\n");
-        isvalid = false;
+        return false;
     }
 }

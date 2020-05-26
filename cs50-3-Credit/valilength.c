@@ -1,15 +1,15 @@
-// Validates length and the start of the card number
+// Validates the length of a card number in a string and returns boolean value
 
-void valilength ( )
+bool valilength (CREDITCARD *card)
 {
     int length;
 
-    length = strlen(number);
+    length = strlen(card->num);
 
     if (length != 13 && length != 15 && length != 16)
     {
-        printf("Invalid\n");
-        isvalid = false;
+        return false;
     }
 
+    return true;
 }
