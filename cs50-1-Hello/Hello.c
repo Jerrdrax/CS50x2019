@@ -6,13 +6,12 @@
 int main(int argc, char const *argv[])
 {
 
-char *name = malloc(30);
+char name[50];
 
     printf("Welcome, what is your name?: ");
     scanf("%s", name);
 
     printf("Hello %s", name);
 
-    free(name);
     return 0;
 }
