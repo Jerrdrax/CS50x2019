@@ -11,7 +11,6 @@ typedef struct
     float letters;
     float words;
     float sentences;
-    int length;
 }
 TXT;
 

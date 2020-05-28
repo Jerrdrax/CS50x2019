@@ -4,7 +4,7 @@ void count_sentences (TXT *texto)
 {
     int i = 0;
 
-    while (i < texto->length)
+    while (texto->text[i] != '\0')
     {
         if (texto->text[i] == '.' || texto->text[i] == '!' || texto->text[i] == '?')
         {

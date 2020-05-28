@@ -5,7 +5,7 @@ void count_letters (TXT *texto)
     int temp;
     int i = 0;
 
-    while (i < texto->length)
+    while (texto->text[i] != '\0')
     {
         temp = isalpha(texto->text[i]);
 

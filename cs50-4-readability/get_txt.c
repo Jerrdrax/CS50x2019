@@ -25,9 +25,8 @@ void get_txt (TXT *texto)
     fgets(texto->text, TXTMAXSIZE, stdin);
 
     temp = strlen(texto->text);
-    texto->length = temp;
-
-    temp = temp + sizeof(char);
+    temp++;
+    
     texto->text = realloc(texto->text, temp * sizeof(char));
 
 }
