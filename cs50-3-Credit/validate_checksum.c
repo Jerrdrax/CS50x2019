@@ -1,6 +1,10 @@
 // Validates Checksum of a credit card number to determinate if is valid.
 
-bool valichecksum (CREDITCARD *card)
+#include <string.h>
+#include <stdbool.h>
+#include "vars-credit.h"
+
+bool validate_checksum (CREDITCARD *card)
 {
     int length, i, j, sum1, sum2;
     int temp1[MAXLENGTH];
@@ -60,12 +64,6 @@ bool valichecksum (CREDITCARD *card)
     sum1 += sum2;
 
     // checks if ends in 0
-    if (sum1 % 10 == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    if (sum1 % 10 == 0) return true;
+    else return false;
 }

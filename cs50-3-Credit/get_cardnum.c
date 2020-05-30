@@ -3,21 +3,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <string.h>
 #include <stdbool.h>
-#include "valilength.c"
-#include "valistart.c"
-#include "valichecksum.c"
+#include "vars-credit.h"
 
 bool get_cardnum (CREDITCARD *card)
 {
-    bool val;
+    bool validator;
     int i;
     int temp = 0;
 
     while (temp == 0)
     {
-        printf("\nEnter the credit card number: ");
+        printf("Enter the credit card number: ");
         scanf("%s", &card->num);
 
         card->num[MAXLENGTH - 1] = '\0';
@@ -35,26 +32,14 @@ bool get_cardnum (CREDITCARD *card)
         }
     }
 
-    val = valilength (card);
-    if (val == false)
-    {
-        // Invalid in length
-        return false;
-    }
+    // Length validation
+    validator = validate_length(card); if(validator == false) return validator;
 
-    val = valistart (card);
-    if (val == false)
-    {
-        // Invalid in the start
-        return false;
-    }
+    // Start validation
+    validator = validate_start(card); if(validator == false) return validator;
 
-    val = valichecksum (card);
-    if (val == false)
-    {
-        // Invalid in Checksum
-        return false;
-    }
+    // Checksum validation
+    validator = validate_checksum(card); if(validator == false) return validator;
 
     // Valid card
     return true;

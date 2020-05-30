@@ -1,7 +1,8 @@
 // variables for credit card validation program
 
-#ifndef VARS_CREDIT_2020_MAY
-#define VARS_CREDIT_2020_MAY
+#ifndef VARS_CREDIT_H
+#define VARS_CREDIT_H
+
 
 // max length of a credit card number
 #define MAXLENGTH 17
@@ -15,5 +16,14 @@ typedef struct
     // names of the cards
     char name[MAXNAME];
 } CREDITCARD;
+
+// functions
+bool get_cardnum (CREDITCARD *card);
+
+bool validate_length (CREDITCARD *card);
+
+bool validate_start (CREDITCARD *card);
+
+bool validate_checksum (CREDITCARD *card);
 
 #endif
