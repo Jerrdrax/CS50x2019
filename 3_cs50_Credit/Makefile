@@ -1,6 +1,6 @@
 # Windows makefile
 
-CC=gcc
+CC = gcc
 terminal=powershell
 finalapp=credit.exe
 outputvalidators=validate_start.o validate_length.o validate_checksum.o

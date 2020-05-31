@@ -1,5 +1,7 @@
 // Counts the sentences in the text
 
+#include "vars_read.h"
+
 void count_sentences (TXT *texto)
 {
     int i = 0;

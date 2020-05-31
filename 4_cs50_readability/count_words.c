@@ -1,5 +1,8 @@
 // Counts the words in the text
 
+#include "vars_read.h"
+#include <ctype.h>
+
 void count_words (TXT *texto)
 {
     int temp;

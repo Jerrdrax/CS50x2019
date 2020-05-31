@@ -2,10 +2,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <ctype.h>
-#include "count_letters.c"
-#include "count_words.c"
-#include "count_sentences.c"
+#include "vars_read.h"
 
 void readability (TXT *texto)
 {

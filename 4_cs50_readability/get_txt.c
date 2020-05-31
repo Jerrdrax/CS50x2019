@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "vars_read.h"
 
 
 // Gets the text to compute from the user
@@ -26,7 +27,7 @@ void get_txt (TXT *texto)
 
     temp = strlen(texto->text);
     temp++;
-    
+
     texto->text = realloc(texto->text, temp * sizeof(char));
 
 }

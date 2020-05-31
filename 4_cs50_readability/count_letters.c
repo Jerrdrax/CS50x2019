@@ -1,5 +1,8 @@
 // Counts the letters in the text
 
+#include <ctype.h>
+#include "vars_read.h"
+
 void count_letters (TXT *texto)
 {
     int temp;

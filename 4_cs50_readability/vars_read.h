@@ -14,4 +14,14 @@ typedef struct
 }
 TXT;
 
+void get_txt (TXT *texto);
+
+void count_letters (TXT *texto);
+
+void count_sentences (TXT *texto);
+
+void count_words (TXT *texto);
+
+void readability (TXT *texto);
+
 #endif
