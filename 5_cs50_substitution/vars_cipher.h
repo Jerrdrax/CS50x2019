@@ -12,15 +12,13 @@
 #define ALPHABET 27
 
 // global variables
-bool isvalid;
 char key[ALPHABET];
-char *text;
 
 bool get_key (int argc, char const argv[ALPHABET]);
 
-void get_txt( );
+void get_txt(char **texto);
 
-void cipher( );
+void cipher(char **texto);
 
 
 #endif

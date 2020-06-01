@@ -3,19 +3,25 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 #include "vars_cipher.h"
 
-void cipher( )
+void cipher(char **texto)
 {
     int i, j, k, temp;
-    char cipher[MAXLENGTH];
+    char *tempstring, *cipher;
     char alphabetlow[ALPHABET];
     char alphabetup[ALPHABET];
 
-    for (i = 0; i < MAXLENGTH; i++)
+    tempstring = *texto;
+    temp = strlen(tempstring);
+    cipher = (char*)calloc(temp, sizeof(char));
+    if (cipher == NULL)
     {
-        cipher[i] = 0;
+        printf("Error in memory\n");
+        exit(1);
     }
+
     for (i = 0, j = 65, k = 97; i < ALPHABET - 1; i++, j++, k++)
     {
         alphabetup[i] = j;
@@ -23,24 +29,24 @@ void cipher( )
     }
 
     i = 0;
-    while (text[i] != '\0')
+    while (tempstring[i] != '\0')
     {
-        if (text[i] >= 65 && text[i] <= 90)
+        if (tempstring[i] >= 65 && tempstring[i] <= 90)
         {
             for (j = 0; j < ALPHABET - 1; j++)
             {
-                if (text[i] == alphabetup[j])
+                if (tempstring[i] == alphabetup[j])
                 {
                     cipher[i] = key[j];
                     cipher[i] = toupper(cipher[i]);
                 }
             }
         }
-        else if (text[i] >= 97 && text[i] <= 122)
+        else if (tempstring[i] >= 97 && tempstring[i] <= 122)
         {
             for (j = 0; j < ALPHABET - 1; j++)
             {
-                if (text[i] == alphabetlow[j])
+                if (tempstring[i] == alphabetlow[j])
                 {
                     cipher[i] = key[j];
                     cipher[i] = tolower(cipher[i]);
@@ -49,11 +55,12 @@ void cipher( )
         }
         else
         {
-            cipher[i] = text[i];
+            cipher[i] = tempstring[i];
         }
         i++;
     }
 
     printf("Ciphertext: %s\n", cipher);
-    free(text);
+    free(tempstring);
+    free(cipher);
 }

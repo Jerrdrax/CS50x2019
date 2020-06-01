@@ -5,22 +5,25 @@
 #include <stdlib.h>
 #include "vars_cipher.h"
 
-void get_txt( )
+void get_txt(char **texto)
 {
     int temp;
+    char *tempstring;
 
-    text = (char*)calloc(MAXLENGTH, sizeof(char));
-    if (text == NULL)
+    tempstring = (char*)calloc(MAXLENGTH, sizeof(char));
+    if (tempstring == NULL)
     {
         printf("Error in memory\n");
         exit(1);
     }
 
     printf("Plaintext: ");
-    fgets(text, MAXLENGTH, stdin);
+    fgets(tempstring, MAXLENGTH, stdin);
 
-    temp = strlen(text);
-    text[temp - 1] = '\0';
+    temp = strlen(tempstring);
+    tempstring[temp - 1] = '\0';
 
-    text = realloc(text, temp * sizeof(char));
+    tempstring = realloc(tempstring, temp * sizeof(char));
+
+    *texto = tempstring;
 }

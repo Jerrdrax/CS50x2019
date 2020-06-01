@@ -8,6 +8,8 @@
 // Start of the function main
 int main(int argc, char const *argv[])
 {
+    char *text;
+    bool isvalid;
     printf("\n");
 
     isvalid = get_key(argc, argv[1]);
@@ -18,8 +20,8 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    get_txt( );
-    cipher( );
+    get_txt(&text);
+    cipher(&text);
 
     printf("\n");
     return 0;
